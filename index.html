@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Greeting App</title>
+</head>
+
+<body>
+    <div class="container">
+    <h1 class="h1">Mind Game!</h1>
+    <h3 class="h3">Type a letter to complete folowing word...</h3>
+    <h2 class="h1">(-?-)at</h2>
+
+    <form class="" onsubmit="Check(); return false ;">
+        <label for="letter"></label>
+        <!-- <input type="text" id="letter" placeholder="Guess which: a, b, c, d or e?"> -->
+        <input class="in" type="text" id="letter" placeholder="type here">
+        <br>
+        <br>
+        <button class="but" type="submit">try it</button>
+    </form>
+
+    <p id="result"></p>
+
+</div>
+
+    <script>
+        function Check() {
+
+            let letter = document.querySelector("#letter").value;
+
+            if (letter == "c") {
+                document.querySelector("#result").innerHTML =
+                    "Good job!" + "its a <b>Cat<b>..";
+
+            } else if (letter == "b" || letter == "d") {
+                document.querySelector("#result").innerHTML = "Close, but not close enough.";
+
+            } else {
+                document.querySelector("#result").innerHTML = "Try again.."
+            }
+        }
+    </script>
+</body>
+
+</html>
